@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo" style="height: 50px; width: auto;">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="Rules.html">Rules</a>
+            <a href="transport.html">Transport</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="main-content">
+        <p class="fs-1" style="line-height: 1em;">R.M.D. ENGINEERING COLLEGE</p>
+        <p class="fs-4" style="line-height: 0em;">(An Autonomous Institution)</p><br>
+        <p class="fs-4" style="line-height: 1em;">Organized By</p>
+        <p class="fs-2" style="line-height: 0em;">Department Of Computer Science And Engineering</p>
+        <p class="rendezvous" tyle="line-height: 0em;">RENDEZVOUS 2k24</p>
+        <p class="fs-1" style="line-height: 1em;">On FEB 5</p>
+    </div>
+    <p id="demo" class="timer"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 5, 2024 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
